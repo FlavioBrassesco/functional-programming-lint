@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "functional"],
+  "rules": {
+    "functional/no-this-expression": "error",
+    "functional/immutable-data": "error",
+    "functional/no-conditional-statement": [
+      "error",
+      {
+        "allowReturningBranches": "ifExhaustive"
+      }
+    ],
+    "functional/no-throw-statement": "error",
+    "no-var": "error",
+    "no-loop-statement": "error"
+  }
+}
